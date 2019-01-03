@@ -122,7 +122,7 @@ for fold_, (trn_idx, val_idx) in enumerate(folds.split(X_train, y_train)):
 
     predictions += clf.predict(X_test, num_iteration=clf.best_iteration) / folds.n_splits
 
-print("CV score: {:<8.5f}".format(mean_squared_error(oof, target)))
+print("CV score: {:<8.6f}".format(mean_squared_error(oof, target)))
 
 # 提交结果
 sub_df = pd.read_csv('data/jinnan_round1_submit_20181227.csv', header=None)
